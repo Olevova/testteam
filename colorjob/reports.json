@@ -1,0 +1,141 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2023-10-02T18:27:02.263Z",
+    "end": "2023-10-02T18:27:08.129Z",
+    "duration": 5866,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "28064b85-4496-4d06-856c-fe6fda88043c",
+      "title": "",
+      "fullFile": "C:\\git\\teamcitytest\\test.js",
+      "file": "\\test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6037e417-550d-4d2b-b27e-7b4453b01544",
+          "title": "testselenium",
+          "fullFile": "C:\\git\\teamcitytest\\test.js",
+          "file": "\\test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"testselenium\"",
+              "fullTitle": "testselenium \"before each\" hook in \"testselenium\"",
+              "timedOut": false,
+              "duration": 1243,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const options = new chrome.Options();\noptions.addArguments(\"--incognito\");\ndriver = await new Builder()\n.forBrowser('chrome')\n.usingServer(\"http://localhost:4444/wd/hub/\")\n.setChromeOptions(options)\n.build()\nconsole.log('her');",
+              "err": {},
+              "uuid": "c0c9e682-50cb-4d00-b2a1-949a71a5bc80",
+              "parentUUID": "6037e417-550d-4d2b-b27e-7b4453b01544",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"testselenium\"",
+              "fullTitle": "testselenium \"after each\" hook in \"testselenium\"",
+              "timedOut": false,
+              "duration": 61,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "if (driver) {\n    await driver.quit();\n  };",
+              "err": {},
+              "uuid": "6e33183c-b286-4c98-994d-b7bfe09c5313",
+              "parentUUID": "6037e417-550d-4d2b-b27e-7b4453b01544",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "run test",
+              "fullTitle": "testselenium run test",
+              "timedOut": false,
+              "duration": 4554,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "console.log('http://192.168.0.103:8080/');\nawait driver.get('http://192.168.0.103:8080/');\nawait driver.sleep(2000);\nconst logo = await driver.findElement(By.xpath('//a[@class=\"logo\"]'));\nconst logotext = await logo.getText();\nawait driver.sleep(2000);\nlogotext.should.to.equal(\"LOGO\")",
+              "err": {},
+              "uuid": "f7e6c0d2-e26c-4830-ab68-f3eee60d205b",
+              "parentUUID": "6037e417-550d-4d2b-b27e-7b4453b01544",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "f7e6c0d2-e26c-4830-ab68-f3eee60d205b"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4554,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 0
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 0
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "reports",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "colorjob",
+        "reportFilename": "reports"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
